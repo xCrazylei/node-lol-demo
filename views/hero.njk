@@ -1,0 +1,18 @@
+{% extends "base.njk" %}
+{% block content %}
+    <div class="info-block">
+        <div class="info-header">
+            <img class="background" src="https://game.gtimg.cn/images/lol/universe/v1/assets/images/vastaya-journal-long.jpg" alt=""/>
+            <span class="info-name">{{info.nickname}}
+                :
+                {{info.name}}</span>
+            <img src="https://game.gtimg.cn/images/lol/universe/images/t1HeaderDivider.png" alt="" srcset=""/>
+            <a href="{{info.gameUri}}">游戏信息</a>
+        </div>
+        <div class="info-body">
+            <div class="desc">
+                {{info.fullDesc | replace("<p>", "") | replace("</p>", "")}}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,188 @@
+.container {
+    width: 100%;
+}
+
+body {
+    background-color: rgb(4, 11, 18);
+    color: #fff;
+}
+
+.list-block {
+    background: url(https://game.gtimg.cn/images/lol/universe/v1/assets/images/ambitions-embrace-splash.jpg) no-repeat;
+    background-size: 100%;
+    background-position-y: -40px;
+    font-size: 0.5em;
+}
+
+h2 {
+    font-family: STKaiti;
+    color: rgb(146, 120, 72);
+    font-weight: bold;
+}
+
+.header {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header>.search {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.header>.search>button {
+    border-radius: 2px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+    background: rgb(146, 120, 72);
+    border: 1px solid rgb(146, 120, 72);
+    color: #fff;
+    font-family: STKaiti;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(146, 120, 72, .25);
+}
+
+.header>.search>button:active {
+    border: none;
+    background: rgba(146, 120, 72, .25) !important;
+}
+
+.header>.search>input {
+    list-style: none;
+    width: 45%;
+    min-width: 400px;
+    border-radius: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: transparent;
+    border: 1px solid rgb(146, 120, 72);
+    color: #fff;
+}
+
+.header>.search>input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(146, 120, 72, .25);
+}
+
+.item {
+    min-width: 250px;
+    min-height: 300px;
+}
+
+.card>img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    margin: 5px;
+    width: 100% !important;
+    background: rgb(4, 11, 18);
+    border-color: rgb(146, 120, 72);
+    cursor: pointer;
+    transition: 240ms;
+}
+
+.card:hover {
+    box-shadow: 0 0 0 0.3rem rgba(146, 120, 72, .25);
+}
+
+.card>.card-body {
+    background-color: rgb(22, 23, 27);
+
+}
+
+.card-title {
+    color: rgb(146, 120, 72)
+}
+
+.card-text {
+    color: rgb(187, 177, 150)
+}
+
+/** info */
+.info-header {
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.info-header>.background {
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    height: 300px;
+}
+
+.info-header img {
+    width: 100%;
+}
+
+.info-header {
+    font-size: 40px;
+    color: rgb(146, 120, 72);
+}
+
+.info-header>a {
+    font-size: 16px;
+    text-decoration: underline;
+    color: rgb(146, 120, 72);
+}
+
+.info-body {
+    margin-bottom: 50px;
+}
+
+.info-body>.desc {
+    height: auto;
+    width: 500px;
+    margin: 0 auto;
+    font-family: STKaiti;
+    color: rgb(146, 120, 72);
+    margin-top: 70px;
+}
+
+@media (max-width: 576px) {
+    body {
+        background-position-y: 0;
+    }
+
+    .header {
+        height: 200px;
+    }
+
+    .header>.search>input {
+        min-width: 200px;
+    }
+
+    .info-header {
+        height: 150px;
+    }
+
+    .info-name {
+        font-size: 25px;
+    }
+
+    .info-header>.background {
+        top: 0;
+        position: absolute;
+        z-index: -1;
+        height: 150px;
+    }
+
+    .info-body>.desc {
+        margin-top: 30px;
+        width: 80%;
+        font-size: 12px;
+    }
+}

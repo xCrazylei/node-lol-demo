@@ -1,0 +1,35 @@
+{% extends "base.njk" %}
+{% block content %}
+    <div class="list-block">
+        <div class="container">
+            <div class="header">
+                <h2>英雄联盟人物故事</h2>
+                <div class="search">
+                    <input type="email" class="form-control" id="searchInput" aria-describedby="emailHelp" value="{{queryVal}}"/>
+                    <button type="button" class="btn btn-primary" onclick="javascript: window.location.href = '/'+$(`#searchInput`).val()+''">
+                        搜索
+                    </button>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                {% for item in list %}
+                    <div class="col">
+                        <div class="card" onclick="window.open('/{{item.slug}}')">
+                            <img src="{{item.image.uri}}" class="card-img-top" alt="..."/>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ item.name }}</h5>
+                                <p class="card-text">
+                                    {{ item.slug }}
+                                </p>
+                                <p class="card-text">
+                                    {{ item["release-date"] }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
